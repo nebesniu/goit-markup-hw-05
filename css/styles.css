@@ -295,6 +295,32 @@ body {
   margin-right: 0;
 }
 
+.work-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.work-text {
+  position: absolute;
+  z-index: 1;
+
+  bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+
+  color: #ffffff;
+}
+
+.box1 {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* ----------------------team---------- */
 
 .team {
