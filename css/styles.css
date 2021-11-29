@@ -116,6 +116,8 @@ body {
   color: var(--second-title-color);
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current {
   color: var(--accent);
@@ -403,6 +405,9 @@ body {
   height: 100%;
   color: #afb1b8;
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item:nth-child(4n) {
@@ -452,6 +457,8 @@ body {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 3%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -488,6 +495,8 @@ body {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"]
@@ -629,46 +638,33 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 
 .wrap {
   position: relative;
-
   width: 100%;
   height: 294px;
-
   overflow: hidden;
 }
 
 .wrap-text {
   display: block;
   position: absolute;
-  width: 322px;
-  height: 168px;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  height: 100%;
 
   line-height: 1.6;
   font-size: 18px;
-
+  background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
 
-  transform: translatex(24px);
+  transform: translateY(100%);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.projects-link:focus .wrap-text,
 .projects-link:hover .wrap-text {
-  transform: translateY(-150%) translateX(24px);
-}
-
-.wrap::before {
-  position: absolute;
-  top: 100%;
-  content: '';
-  width: 100%;
-  height: 100%;
-
-  background: rgba(33, 150, 243, 0.9);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-link:hover .wrap::before {
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
 
 .projects-after-title {
@@ -736,6 +732,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   min-width: 528px;
   min-height: 581px;
@@ -747,7 +744,22 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 }
 
 .modal-btn {
-  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
+  padding: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
 }
+
 /* - cubic-bezier(0.4, 0, 0.2, 1) */
