@@ -720,6 +720,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -758,11 +759,11 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   position: absolute;
   top: 10px;
   right: 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-
   width: 30px;
   height: 30px;
 
